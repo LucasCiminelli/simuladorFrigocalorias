@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="ejecutarAlgoritmo()">Ejecutar</button>
+
+    <h1>Simulador de Frigocalorías</h1>
+
+    <div id="resultados">
+      <p id="mensaje"></p>
+      <p id="total"></p>
+      <p id="modelo"></p>
+    </div>
+
+    <div id="inputs">
+      <label for="zona">Zona del edificio:</label>
+      <select id="zona">
+        <option value="1">Templada</option>
+        <option value="2">Cálida</option>
+        <option value="3">Muy cálida</option>
+      </select>
+      <button onclick="seleccionarZona()">Siguiente</button>
+      <br />
+      <label for="tipoEdificio">Tipo de Edificio</label>
+      <select name="" id="tipoEdificio">
+        <option value="1">Edificio nuevo (Menos de 10 años)</option>
+        <option value="2">Construcción reciente (Entre 10 y 50 años)</option>
+        <option value="3">Edificio antiguo (Más de 50 años)</option>
+      </select>
+      <button onclick="elegirTipoZona()">Siguiente</button>
+      <br />
+      <label for="tipoHabitacion">Tipo de Habitación</label>
+      <select name="" id="tipoHabitacion">
+        <option value="1">Living</option>
+        <option value="2">Dormitorio</option>
+        <option value="3">Oficina</option>
+        <option value="4">Comercio</option>
+      </select>
+      <button onclick="elegirTipoHabitacion()">Siguiente</button>
+      <br />
+      <label for="dimensiones">Ingrese las dimensiones de la habitación en metros</label>
+      <input type="number" id="ancho" placeholder="Ancho" />
+      <input type="number" id="largo" placeholder="Largo" />
+      <button onclick="elegirDimensiones()">Siguiente</button>
+      <br />
+      <label for="debajoDe">La habitación está debajo de: </label>
+      <select name="" id="debajoDe">
+        <option value="1">Un espacio habitado</option>
+        <option value="2">Un tejado</option>
+        <option value="3">Una terraza</option>
+      </select>
+      <button onclick="elegirDebajoDe()">Siguiente</button>
+      <br />
+      <label for="encimaDe">La habitación está Encima de: </label>
+      <select name="" id="encimaDe">
+        <option value="1">Un espacio habitado</option>
+        <option value="2">Tierra, bajos o sotano</option>
+        <option value="3">Aire libre</option>
+      </select>
+      <button onclick="elegirEncimaDe()">Siguiente</button>
+      <br/>
+      <label for="orientacionPared">La pared sobre la que colocará el aire sobre que eje cardinal: </label>
+      <select name="" id="orientacionPared">
+        <option value="1">Norte</option>
+        <option value="2">Este</option>
+        <option value="3">Sur</option>
+        <option value="4">Oeste</option>
+      </select>
+      <button onclick="elegirOrientacionPared()">Siguiente</button>
+      <br/>
+      <label for="cantidadPersonas">Cantidad de Habitantes </label>
+      <select name="" id="cantidadPersonas">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <button onclick="elegirCantidadPersonas()">Siguiente</button>
+      <br/>
+      <label for="intensidadIluminacion">Intensidad de la iluminación </label>
+      <select name="" id="intensidadIluminacion">
+        <option value="1">Baja</option>
+        <option value="2">Media</option>
+        <option value="3">Alta</option>
+      </select>
+      <button onclick="elegirIntensidadIluminacion()">Siguiente</button>
+      <br/>
+      <label for="tipoIluminacion">Tipo de iluminación </label>
+      <select name="" id="tipoIluminacion">
+        <option value="1">Standard</option>
+        <option value="2">Fluorescente</option>
+        <option value="3">Halogena</option>
+        <option value="4">Led</option>
+      </select>
+      <button onclick="elegirTipoIluminacion()">Siguiente</button>
+      <br />
+      <label for="watts">Ingrese la cantidad de equipamiento que tiene por componente: </label>
+      <input type="number" id="cantidadPcs" placeholder="Cantidad de Computadoras " />
+      <input type="number" id="cantidadImpresoras" placeholder="Cantidad de Impresoras" />
+      <input type="number" id="cantidadTelevisores" placeholder="Cantidad de Televisores" />
+      <input type="number" id="cantidadEquiposAudio" placeholder="Cantidad de equipos de audio" />
+      <input type="number" id="cantidadDispositivosWatts" placeholder="Cantidad de dispositivos extras en watts" />
+      
+      <button onclick="elegirWatts()">Siguiente</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
